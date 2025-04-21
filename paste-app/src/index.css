@@ -6,3 +6,12 @@
     flex-direction: row;
     width: 100%;
 }
+.text-area{
+    min-width: 70%;
+}
+.input{
+    min-width: 52%;
+}
+.button{
+    min-width: 15%;
+}

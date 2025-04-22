@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import {useDispatch} from 'react-redux'
+import { addToPaste, updateToPaste } from "../redux/pasteSlice";
 
 const Home = () => {
   const [title, setTitle] = useState("");
@@ -51,7 +52,9 @@ const Home = () => {
       <div>
         <textarea
           placeholder="Enter Content Here..."
-          rows="20"
+          rows={20}
+          value={value}
+          onChange={(e)=>setValue(e.target.value)}
           className="m-4 mt-2 p-2 rounded-3 border border-secondary-subtle text-area"
         ></textarea>
       </div>
